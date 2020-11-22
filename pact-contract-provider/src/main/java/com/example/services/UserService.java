@@ -5,6 +5,8 @@ import com.example.models.User;
 import com.example.models.UserRole;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+
 @Service
 public class UserService {
 
@@ -13,8 +15,14 @@ public class UserService {
                 .id(userId)
                 .fullName("Fahmi BEN SALAH")
                 .role(UserRole.ADMIN)
-                .permission(Permission.builder().id("1").name("Permission 1").build())
-                .permission(Permission.builder().id("2").name("Permission 2").build())
+                .permissions(new ArrayList<Permission>() {{
+                    add(
+                            Permission.builder()
+                                    .id("001")
+                                    .name("permission_001")
+                                    .build()
+                    );
+                }})
                 .build();
     }
 }
