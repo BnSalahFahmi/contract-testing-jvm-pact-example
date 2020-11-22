@@ -76,13 +76,8 @@
                 <version>${pact.version}</version>
                 <configuration>
                     <pactBrokerUrl>http://localhost/</pactBrokerUrl>
-                    <pactDirectory>${project.build.directory}/pacts
-                    </pactDirectory>
+                    <pactDirectory>${project.build.directory}/pacts</pactDirectory>
                     <projectVersion>${project.version}</projectVersion>
-                    <tags>
-                        <tag>feature/pact_test</tag>
-                    </tags>
-                    <trimSnapshot>true</trimSnapshot>
                 </configuration>
             </plugin>
         </plugins>
