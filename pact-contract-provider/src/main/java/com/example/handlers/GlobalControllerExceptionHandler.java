@@ -12,6 +12,7 @@ public class GlobalControllerExceptionHandler {
     @ExceptionHandler(NotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public void handleNotFound() {
+        // TODO
     }
 
 }
