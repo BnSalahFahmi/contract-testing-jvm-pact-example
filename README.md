@@ -2,10 +2,11 @@
 
 > A consumer-driven contract testing example using pact-jvm, spring boot, and maven to verify the interactions between microservices.
 
-Example project that contains :
+Project that contains :
 
-- `pact-contract-consumer`: example consumer
-- `pact-contract-provider`: example provider
+- `provider`: example provider
+- `consumer`: example consumer
+- `consumer-ui`: example consumer
 
 ## Intro to Pact
 
