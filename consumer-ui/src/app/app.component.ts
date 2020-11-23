@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {UserService} from "./user.service";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'consumer-ui';
+
+  userId: string;
+  user$: Observable<User>;
+
+  constructor(private userService: UserService) {
+
+  }
+
+  displayUserData() {
+    this.user$ = this.userService.get(this.userId);
+  }
+
 }
